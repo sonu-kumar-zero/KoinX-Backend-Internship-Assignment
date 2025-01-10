@@ -12,9 +12,9 @@ This repository contains the solution for the KoinX Backend Internship Assignmen
 
 ### Available Coins
 
--Bitcoin
--Ethereum
--Matic Network
+- Bitcoin
+- Ethereum
+- Matic Network
 
 1. Stats of coin:
 
