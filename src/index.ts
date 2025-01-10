@@ -2,8 +2,26 @@ import dotenv from "dotenv";
 import { app } from "./app";
 
 dotenv.config();
+if (!process.env.PORT) {
+  console.warn(
+    "PORT environment variable is not set. Defaulting to port 4000."
+  );
+}
 const port = process.env.PORT || 4000;
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const server = app.listen(port, async () => {
+  try {
+    console.log(`Server is running on port ${port}`);
+  } catch (error) {
+    console.error("Error starting background job:", error);
+    process.exit(1);
+  }
+});
+
+process.on("SIGINT", () => {
+  console.log("Server shutting down...");
+  server.close(() => {
+    console.log("Server has been closed.");
+    process.exit(0);
+  });
 });
