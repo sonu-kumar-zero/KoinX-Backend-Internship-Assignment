@@ -13,7 +13,7 @@ const port = process.env.PORT || 4000;
 const server = app.listen(port, async () => {
   try {
     console.log(`Server is running on port ${port}`);
-    await startBackgroundJobOfDataFetching();
+    // await startBackgroundJobOfDataFetching();
   } catch (error) {
     console.error("Error starting background job:", error);
     process.exit(1);
