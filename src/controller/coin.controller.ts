@@ -15,6 +15,7 @@ export const fetchStatsOfGivenCoin = async (req: Request, res: Response) => {
       where: {
         cryptocurrencyName: coin,
       },
+      take: 100,
       orderBy: {
         createdAt: "desc",
       },
