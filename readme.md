@@ -8,6 +8,26 @@ This repository contains the solution for the KoinX Backend Internship Assignmen
 - Prisma ORM with MongoDB Atlas
 - RESTful API endpoints
 
+## Routes
+
+### Available Coins
+
+-Bitcoin
+-Ethereum
+-Matic Network
+
+1. Stats of coin:
+
+```
+https://koinx-asssignment-sonu-kumar-zero.onrender.com/api/v1/coin/deviation?coin=Bitcoin
+```
+
+2. Deviation of coin:
+
+```
+https://koinx-asssignment-sonu-kumar-zero.onrender.com/api/v1/coin/stats?coin=Bitcoin
+```
+
 ## Setup Instructions
 
 ### Prerequisites
