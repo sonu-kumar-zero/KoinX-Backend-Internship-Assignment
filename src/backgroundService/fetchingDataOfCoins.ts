@@ -34,7 +34,6 @@ const fetchCryptoData = async (): Promise<CryptoData[]> => {
     const idString = Object.values(cryptoIds).join(",");
     const response = await coinLoreClient.get(`ticker/?id=${idString}`);
     const data: CryptoData[] = response.data;
-    console.log(data);
     return data;
   } catch (error) {
     if (error instanceof Error) {
